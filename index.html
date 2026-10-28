@@ -1,0 +1,965 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <meta
+        name="description"
+        content="Conheça o trabalho de Rhainara Santos, nutricionista clínica e esportiva em Bauru."
+    >
+
+    <title>Rhainara Santos | Nutrição clínica e esportiva</title>
+
+    <style>
+        /* CONFIGURAÇÕES GERAIS */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: #e9ded0;
+            color: #352419;
+            font-family: Arial, sans-serif;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        p {
+            line-height: 1.8;
+            color: #655044;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: Georgia, serif;
+            font-weight: normal;
+        }
+
+        /* CABEÇALHO */
+
+        header {
+            padding: 22px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+            border-bottom: 1px solid #c6b19d;
+        }
+
+        .marca {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .marca strong {
+            font-family: Georgia, serif;
+            font-size: 23px;
+        }
+
+        .marca span {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #76573f;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 20px;
+            font-size: 14px;
+        }
+
+        nav a {
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #805f49;
+        }
+
+        /* PÁGINA INICIAL */
+
+        .hero {
+            padding: 90px 7% 80px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 7%;
+            align-items: center;
+            background: #d5c2ae;
+        }
+
+        .hero > div,
+        .intro > div {
+            min-width: 0;
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 0.19em;
+            font-size: 11px;
+            font-weight: bold;
+            color: #76573f;
+        }
+
+        h1 {
+            font-size: clamp(46px, 6vw, 80px);
+            line-height: 1.04;
+            margin: 24px 0;
+        }
+
+        h1 em {
+            color: #805f49;
+        }
+
+        .lead {
+            font-size: 18px;
+            max-width: 570px;
+        }
+
+        /* BOTÕES */
+
+        .button {
+            display: inline-block;
+            padding: 16px 23px;
+            background: #432b1e;
+            color: #fff;
+            text-decoration: none;
+            margin: 18px 10px 0 0;
+            font-size: 14px;
+        }
+
+        .button.light {
+            background: transparent;
+            color: #432b1e;
+            border: 1px solid #795c48;
+        }
+
+        /* FOTO DA RHAINARA */
+
+        .foto-perfil {
+            width: 100%;
+            height: 480px;
+            overflow: hidden;
+            background: #80644f;
+            border-radius: 180px 180px 0 0;
+        }
+
+        .foto-perfil img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 25%;
+        }
+
+        /* SEÇÕES */
+
+        .wrap {
+            max-width: 1100px;
+            margin: auto;
+            padding: 85px 30px;
+        }
+
+        .intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+        }
+
+        h2 {
+            font-size: clamp(34px, 4vw, 52px);
+            line-height: 1.12;
+            margin: 15px 0 24px;
+        }
+
+        /* CARTÕES */
+
+        .band {
+            background: #f4ece2;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            margin-top: 35px;
+        }
+
+        .card {
+            min-width: 0;
+            border-top: 1px solid #a68d76;
+            padding: 25px 8px;
+        }
+
+        .card b {
+            color: #a1785a;
+            font: 26px Georgia;
+        }
+
+        .card h3 {
+            font-size: 26px;
+        }
+
+        /* FORMAÇÃO ACADÊMICA */
+
+        #formacao .cards {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        /* EXPERIÊNCIA PROFISSIONAL */
+
+        .experiencias {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            margin-top: 40px;
+        }
+
+        .experiencias::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 1px;
+            background: #b99b7e;
+            transform: translateX(-50%);
+        }
+
+        .experiencia {
+            position: relative;
+            width: calc(50% - 30px);
+            padding: 28px;
+            background: #f4ece2;
+            border: 1px solid #c6b19d;
+            border-radius: 12px;
+            transition:
+                background 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .experiencia:nth-child(odd) {
+            align-self: flex-start;
+        }
+
+        .experiencia:nth-child(even) {
+            align-self: flex-end;
+        }
+
+        .experiencia::before {
+            content: "";
+            position: absolute;
+            top: 32px;
+            width: 12px;
+            height: 12px;
+            background: #805f49;
+            border: 3px solid #e9ded0;
+            border-radius: 50%;
+        }
+
+        .experiencia:nth-child(odd)::before {
+            right: -37px;
+        }
+
+        .experiencia:nth-child(even)::before {
+            left: -37px;
+        }
+
+        .experiencia:hover,
+        .experiencia:focus-visible {
+            background: #fff7ed;
+            border-color: #b48354;
+            box-shadow: 0 0 25px rgba(180, 131, 84, 0.35);
+            transform: translateY(-4px);
+        }
+
+        .experiencia:focus-visible {
+            outline: 2px solid #805f49;
+            outline-offset: 4px;
+        }
+
+        .experiencia h3 {
+            margin: 0 0 16px;
+            font-size: 22px;
+            line-height: 1.35;
+            text-transform: uppercase;
+            overflow-wrap: anywhere;
+        }
+
+        .experiencia .cargo {
+            margin: 0 0 8px;
+            font-weight: bold;
+            color: #432b1e;
+        }
+
+        .experiencia .periodo {
+            margin: 0 0 18px;
+            font-size: 13px;
+            color: #76573f;
+        }
+
+        .experiencia ul {
+            padding-left: 18px;
+            margin: 0;
+            color: #655044;
+            line-height: 1.7;
+        }
+
+        .experiencia li + li {
+            margin-top: 8px;
+        }
+
+        /* CONTATO */
+
+        .dark {
+            background: #3e291e;
+            color: #f4e7d8;
+        }
+
+        .dark .eyebrow {
+            color: #c9aa91;
+        }
+
+        .dark p {
+            color: #d7c2af;
+        }
+
+        .contacts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .contacts a {
+            border: 1px solid #a58b76;
+            padding: 14px 18px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .contacts a:hover {
+            background: #f0e1d1;
+            color: #3e291e;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            padding: 25px 7%;
+            background: #2d1d15;
+            color: #c7b4a4;
+            font-size: 13px;
+        }
+
+        /* TABLET */
+
+        @media (max-width: 900px) {
+            #formacao .cards {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        /* CELULAR */
+
+        @media (max-width: 700px) {
+            header {
+                gap: 20px;
+            }
+
+            .marca strong {
+                font-size: 20px;
+            }
+
+            .marca span {
+                font-size: 8px;
+                letter-spacing: 1px;
+            }
+
+            nav a:not(:last-child) {
+                display: none;
+            }
+
+            .hero,
+            .intro {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 65px 7%;
+            }
+
+            .foto-perfil {
+                height: 360px;
+                margin-top: 20px;
+            }
+
+            .wrap {
+                padding: 65px 25px;
+            }
+
+            .cards,
+            #formacao .cards {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            h1 {
+                font-size: 48px;
+            }
+
+            .experiencias {
+                padding-left: 24px;
+            }
+
+            .experiencias::before {
+                left: 0;
+                transform: none;
+            }
+
+            .experiencia {
+                width: 100%;
+                padding: 24px;
+            }
+
+            .experiencia:nth-child(odd),
+            .experiencia:nth-child(even) {
+                align-self: stretch;
+            }
+
+            .experiencia:nth-child(odd)::before,
+            .experiencia:nth-child(even)::before {
+                left: -30px;
+                right: auto;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .experiencia {
+                transition: none;
+            }
+
+            .experiencia:hover,
+            .experiencia:focus-visible {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header>
+        <div class="marca">
+            <strong>Rhainara Santos</strong>
+            <span>SAÚDE | EQUILÍBRIO | RESULTADOS</span>
+        </div>
+
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#formacao">Formação</a>
+            <a href="#experiencia">Experiência</a>
+            <a href="#atuacao">Atuação</a>
+            <a href="#contato">Contato ↗</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PÁGINA INICIAL -->
+
+        <section class="hero">
+            <div>
+                <span class="eyebrow">
+                    Nutrição clínica & esportiva · Bauru, SP
+                </span>
+
+                <h1>
+                    Saúde, equilíbrio <em>e resultados.</em>
+                </h1>
+
+                <p class="lead">
+                    Um acompanhamento nutricional que considera sua rotina,
+                    seus objetivos e a sua história.
+                </p>
+
+                <a
+                    class="button"
+                    href="https://wa.me/5514981838471?text=Ol%C3%A1%2C%20Rhainara!%20Gostaria%20de%20saber%20mais%20sobre%20o%20acompanhamento%20nutricional."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Conversar pelo WhatsApp ↗
+                </a>
+
+                <a class="button light" href="#sobre">
+                    Conheça meu trabalho
+                </a>
+            </div>
+
+            <div class="foto-perfil">
+                <img
+                    src="imagens/perfil.jpeg"
+                    alt="Rhainara Santos sorrindo e segurando um computador"
+                >
+            </div>
+        </section>
+
+        <!-- SOBRE A RHAINARA -->
+
+        <section id="sobre" class="wrap intro">
+            <div>
+                <span class="eyebrow">
+                    Prazer, sou Rhainara
+                </span>
+
+                <h2>
+                    Nutrição e movimento fazem parte da minha história.
+                </h2>
+            </div>
+
+            <div>
+                <p>
+                    O universo fitness faz parte da minha vida há muitos anos.
+                    O que começou como uma paixão pela academia se tornou um
+                    estilo de vida e, mais tarde, também a profissão que escolhi
+                    seguir.
+                </p>
+
+                <p>
+                    Ao longo dessa trajetória, vivi diferentes fases com meu
+                    próprio corpo e tive a oportunidade de realizar um dos
+                    desafios mais marcantes da minha jornada: me preparar e
+                    competir no fisiculturismo. Foi uma experiência que me
+                    aproximou ainda mais da realidade do esporte e de tudo o
+                    que envolve a busca por evolução física.
+                </p>
+
+                <p>
+                    Hoje, como nutricionista clínica e esportiva, encontrei
+                    na Nutrição uma forma de unir duas coisas que fazem parte
+                    de quem sou: o cuidado com a saúde e a paixão pelo
+                    treinamento.
+                </p>
+
+                <p>
+                    Atendo pessoas com objetivos diferentes, desde quem está
+                    começando na academia e quer mudar seus hábitos até quem
+                    busca ganhar massa muscular, perder gordura ou melhorar
+                    sua performance.
+                </p>
+
+                <p>
+                    Meu olhar para cada paciente vai além do que está escrito
+                    em um plano alimentar. Quero entender sua rotina, suas
+                    dificuldades e seus objetivos para construir uma estratégia
+                    que faça sentido na prática, sem esquecer que cada pessoa
+                    tem seu próprio ritmo e sua própria história.
+                </p>
+
+                <p>
+                    Afinal, eu também faço parte desse universo. Conheço a
+                    dedicação que o treinamento exige e valorizo o processo
+                    que existe por trás de cada conquista. Hoje, poder unir
+                    essa vivência à minha profissão é o que torna meu trabalho
+                    tão significativo.
+                </p>
+
+                <p>
+                    Nutrição, treinamento e saúde: três partes de uma paixão
+                    que se transformou em propósito.
+                </p>
+
+                <p>
+                    <strong>
+                        Nutricionista Clínica e Esportiva | CRN-3 73002
+                    </strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- FORMAÇÃO ACADÊMICA -->
+
+        <section class="wrap" id="formacao">
+            <span class="eyebrow">
+                Conhecimento e trajetória
+            </span>
+
+            <h2>Formação acadêmica</h2>
+
+            <div class="cards">
+                <article class="card">
+                    <h3>Educação Física</h3>
+
+                    <p>
+                        Bacharelado em andamento · Anhembi Morumbi
+                        <br>
+                        Início em 2023 · 7º semestre
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Nutrição</h3>
+
+                    <p>
+                        Ensino superior · Universidade Paulista (UNIP),
+                        Bauru–SP
+                        <br>
+                        Janeiro de 2016 a maio de 2021
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Nutrição e Dietética</h3>
+
+                    <p>
+                        Ensino técnico · Instituto Ana Nery
+                        <br>
+                        Setembro de 2015
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Ensino Médio</h3>
+
+                    <p>
+                        E.E. Prof. Christino Cabral
+                        <br>
+                        Fevereiro de 2006 a dezembro de 2014
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- EXPERIÊNCIA PROFISSIONAL -->
+
+        <section class="wrap" id="experiencia">
+            <span class="eyebrow">
+                Vivência e trajetória
+            </span>
+
+            <h2>Experiência profissional</h2>
+
+            <div class="experiencias">
+
+                <article class="experiencia" tabindex="0">
+                    <h3>Nutricionista Autônoma</h3>
+
+                    <p class="cargo">Nutricionista</p>
+                    <p class="periodo">Janeiro de 2022 – Atual</p>
+
+                    <ul>
+                        <li>Atendimento nutricional clínico e esportivo.</li>
+                        <li>
+                            Elaboração de estratégias nutricionais voltadas
+                            ao emagrecimento e à promoção da saúde.
+                        </li>
+                        <li>
+                            Acompanhamento nutricional individualizado,
+                            conforme os objetivos e as necessidades dos pacientes.
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="experiencia" tabindex="0">
+                    <h3>Panobianco Cruzeiro do Sul</h3>
+
+                    <p class="cargo">Estagiária de Educação Física</p>
+                    <p class="periodo">02/09/2026 – Atual</p>
+
+                    <ul>
+                        <li>
+                            Acompanhamento e orientação de alunos na sala de
+                            musculação, conforme as atribuições do estágio
+                            supervisionado.
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="experiencia" tabindex="0">
+                    <h3>F&amp;F Alimentação LTDA. – Noroeste SAF</h3>
+
+                    <p class="cargo">Nutricionista</p>
+                    <p class="periodo">10/12/2025 a 28/07/2026</p>
+
+                    <ul>
+                        <li>
+                            Gestão de Unidade de Alimentação e Nutrição (UAN).
+                        </li>
+                        <li>Atuação em nutrição clínica esportiva.</li>
+                    </ul>
+                </article>
+
+                <article class="experiencia" tabindex="0">
+                    <h3>Panobianco Cruzeiro do Sul</h3>
+
+                    <p class="cargo">Estagiária de Educação Física</p>
+                    <p class="periodo">01/10/2025 a 04/12/2025</p>
+
+                    <ul>
+                        <li>
+                            Acompanhamento e orientação de alunos na sala de
+                            musculação, conforme as atribuições do estágio
+                            supervisionado.
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="experiencia" tabindex="0">
+                    <h3>
+                        DoctorFit Bauru – Studio de Treinamento Personalizado
+                    </h3>
+
+                    <p class="cargo">Estagiária de Educação Física</p>
+                    <p class="periodo">20/01/2025 a 04/04/2025</p>
+
+                    <ul>
+                        <li>
+                            Acompanhamento de atividades de treinamento
+                            personalizado.
+                        </li>
+                        <li>
+                            Vivência prática em musculação e treinamento funcional.
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="experiencia" tabindex="0">
+                    <h3>REDFIT Academia</h3>
+
+                    <p class="cargo">Recepcionista</p>
+                    <p class="periodo">21/08/2023 a 21/09/2024</p>
+
+                    <ul>
+                        <li>Atendimento ao cliente.</li>
+                        <li>
+                            Suporte às rotinas de recepção e atendimento
+                            da academia.
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="experiencia" tabindex="0">
+                    <h3>Class Centro Integrado</h3>
+
+                    <p class="cargo">Nutricionista</p>
+                    <p class="periodo">06/11/2023 a 10/09/2024</p>
+
+                    <ul>
+                        <li>Atendimento nutricional clínico.</li>
+                        <li>
+                            Atendimento especializado em nutrição materno-infantil.
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="experiencia" tabindex="0">
+                    <h3>Marathon Wellness Academia de Ginástica LTDA.</h3>
+
+                    <p class="cargo">Recepcionista e Coordenadora</p>
+                    <p class="periodo">20/06/2022 a 10/08/2023</p>
+
+                    <ul>
+                        <li>Atendimento ao cliente.</li>
+                        <li>
+                            Coordenação de equipe e apoio às rotinas
+                            operacionais da academia.
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="experiencia" tabindex="0">
+                    <h3>Maternidade Santa Isabel – FAMESP</h3>
+
+                    <p class="cargo">Técnica em Nutrição e Dietética</p>
+                    <p class="periodo">Abril de 2017 a janeiro de 2022</p>
+
+                    <ul>
+                        <li>
+                            Supervisão de Unidade de Alimentação e Nutrição (UAN).
+                        </li>
+                        <li>
+                            Controle de qualidade higiênico-sanitária e
+                            acompanhamento das normas de segurança do trabalho.
+                        </li>
+                        <li>
+                            Acompanhamento dos processos de produção e
+                            distribuição de refeições.
+                        </li>
+                        <li>Assistência nutricional aos pacientes.</li>
+                        <li>
+                            Supervisão de lactário, com atuação na padronização
+                            de normas e procedimentos para preparo e manipulação
+                            de fórmulas infantis e leite materno.
+                        </li>
+                        <li>
+                            Atuação no posto de coleta de leite humano, com
+                            orientação sobre amamentação, coleta, armazenamento
+                            e distribuição de leite humano ordenhado.
+                        </li>
+                    </ul>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ÁREAS DE ATUAÇÃO -->
+
+        <section class="band" id="atuacao">
+            <div class="wrap">
+                <span class="eyebrow">
+                    Como posso ajudar
+                </span>
+
+                <h2>Um caminho pensado para você.</h2>
+
+                <div class="cards">
+                    <article class="card">
+                        <b>01</b>
+
+                        <h3>Ganho de massa muscular</h3>
+
+                        <p>
+                            Estratégias alimentares alinhadas à sua rotina
+                            de treinos e aos seus objetivos.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <b>02</b>
+
+                        <h3>Emagrecimento</h3>
+
+                        <p>
+                            Orientação individualizada para construir hábitos
+                            alimentares que façam sentido para você.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <b>03</b>
+
+                        <h3>Saúde e desempenho</h3>
+
+                        <p>
+                            Acompanhamento para quem busca cuidar da
+                            alimentação, da saúde e da performance.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACOMPANHAMENTO NUTRICIONAL -->
+
+        <section class="wrap intro">
+            <div>
+                <span class="eyebrow">
+                    Acompanhamento nutricional
+                </span>
+
+                <h2>
+                    Cuidado que vai além de um plano alimentar.
+                </h2>
+            </div>
+
+            <div>
+                <p>
+                    O acompanhamento começa conhecendo seus hábitos,
+                    suas preferências e seus objetivos. A partir disso,
+                    a estratégia é construída para a sua realidade e
+                    acompanhada ao longo do processo.
+                </p>
+
+                <p>
+                    Entre em contato para conhecer as opções de
+                    acompanhamento, valores e disponibilidade.
+                </p>
+
+                <a
+                    class="button"
+                    href="https://wa.me/5514981838471"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Quero saber mais ↗
+                </a>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+
+        <section id="contato" class="dark">
+            <div class="wrap">
+                <span class="eyebrow">
+                    Vamos conversar?
+                </span>
+
+                <h2>Seu próximo passo começa aqui.</h2>
+
+                <p>
+                    Entre em contato ou acompanhe meu trabalho nas redes sociais.
+                </p>
+
+                <div class="contacts">
+                    <a
+                        href="https://wa.me/5514981838471"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        WhatsApp ↗
+                    </a>
+
+                    <a href="mailto:rhainarasantoscoach@gmail.com">
+                        E-mail ↗
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/coach.rhainarasantos/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Instagram ↗
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+        © Rhainara Santos · Nutrição clínica e esportiva · Bauru, SP
+    </footer>
+
+</body>
+
+</html>
